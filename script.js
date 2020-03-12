@@ -1,3 +1,9 @@
+// GLOBALS
+
+const MIN_PASSWORD_LENGTH = 7
+const MAX_PASSWORD_LENGTH = 128
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate")
 
@@ -22,7 +28,7 @@ function checkValidNumInput() {
   let lengthInput = prompt('Choose password length between 8 and 128 characters.')
   let intInput = parseInt(lengthInput)
 
-  if (!isNaN(intInput) && intInput > 7 && intInput < 128) {
+  if (!isNaN(intInput) && intInput > MIN_PASSWORD_LENGTH && intInput < MAX_PASSWORD_LENGTH) {
     isValid = true
     return intInput
   } else {
